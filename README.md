@@ -1,3 +1,3 @@
 # R3F boilerplate
 
-React Three Fiber + Cannonjs + Vite
+React Three Fiber + Crashcat + Vite
