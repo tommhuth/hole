@@ -1,0 +1,48 @@
+{
+    "name": "r3f-boilerplate",
+    "private": true,
+    "version": "2.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "vite build",
+        "lint": "eslint \"**/*.{ts,tsx}\" --report-unused-disable-directives --fix --max-warnings 0",
+        "preview": "vite preview",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@huth/random": "^6.0.2",
+        "@react-three/drei": "^10.1.2",
+        "@react-three/fiber": "^9.1.2",
+        "@types/node": "^24.0.0",
+        "@vitejs/plugin-react-swc": "^3.10.2",
+        "crashcat": "^0.0.4",
+        "object-deep-merge": "^2.0.0",
+        "r3f-perf": "^7.2.3",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "three": "^0.181.0",
+        "use-animation-frame": "^0.2.1",
+        "vite": "^6.3.5",
+        "vite-plugin-glsl": "^1.4.2",
+        "vite-plugin-pwa": "^1.0.0",
+        "zustand": "^5.0.5"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "@types/react": "^18.3.0",
+        "@types/react-dom": "^18.3.0",
+        "@types/three": "^0.181.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "eslint": "^9.17.0",
+        "eslint-plugin-react": "^7.37.2",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.16",
+        "globals": "^16.2.0",
+        "sass": "^1.89.2",
+        "tunnel-rat": "^0.1.2",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.34.0"
+    }
+}
