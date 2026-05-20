@@ -5,7 +5,7 @@ import { Mesh, Vector3 } from "three"
 import { Tuple3 } from "./types/global"
 import { CrashcatProvider, useBody, useCrashcat } from "@data/crashcat"
 import { box, compound, MotionType, registerShapes, rigidBody, triangleMesh, scaled } from "crashcat"
-import { useMemo, useState } from "react"
+import { lazy, useMemo, useState } from "react"
 import random from "@huth/random"
 import { damp } from "three/src/math/MathUtils.js"
 import { Lights } from "@components/lights"
@@ -19,6 +19,7 @@ registerShapes([scaled.def, box.def, compound.def, triangleMesh.def])
 import { useGLTF } from "@react-three/drei"
 
 import floorModel from "@assets/models/floor.glb"
+import config from "@data/config"
 
 type GLTFResult = GLTF & {
     nodes: {
@@ -172,6 +173,12 @@ function Box({
     )
 }
 
+const Perf = lazy(async () => {
+    const { Perf } = await import("r3f-perf")
+
+    return { default: Perf }
+})
+
 export default function App() {
     const [size, setSize] = useState(0)
     const boxes = useMemo(() => {
@@ -219,6 +226,7 @@ export default function App() {
                     />
                 )
             })}
+            {config.STATS && <Perf deepAnalyze antialias={false} />}
         </CrashcatProvider>
     )
 }
