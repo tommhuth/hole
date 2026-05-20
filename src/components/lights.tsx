@@ -9,15 +9,15 @@ export function Lights() {
     return (
         <>
             <SoftShadows
-                size={55}
-                samples={20}
-                focus={1.25}
+                size={20}
+                samples={10}
+                focus={1}
             />
             <directionalLight
                 position={[14, 16, 3]}
                 intensity={2}
                 castShadow
-                shadow-mapSize={[1024 * 2, 1024 * 2]}
+                shadow-mapSize={[1024, 1024]}
                 shadow-normalBias={-.01}
                 shadow-camera-near={-size * 2}
                 shadow-camera-far={size * 2}
